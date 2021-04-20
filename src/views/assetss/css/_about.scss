@@ -1,0 +1,95 @@
+.about-top {
+  margin-bottom: 10px;
+  .breadcrumb-sidebar {
+    margin: 20px 0 0px;
+  }
+  .title-left {
+    margin: 0 0 12px;
+  }
+}
+.about-top2 {
+  .check-title-left {
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+.about-top3 {
+  .chose-us-item {
+    border-bottom: 1px dotted #aaa;
+    display: inline-block;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    a {
+      color: #666;
+      font-size: 13px;
+      i {
+        font-size: 15px;
+        margin-right: 10px;
+      }
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+}
+.about-bottom {
+  background-color: #f5f5f5;
+  padding-top: 55px;
+  padding-bottom: 30px;
+  .about-bottom-slide {
+    text-align: center;
+    padding-bottom: 26px;
+    .check-title-left {
+      margin-bottom: 5px;
+    }
+  }
+}
+.has-dots {
+  padding-top: 60px;
+  position: relative;
+  .owl-dots {
+    padding: 0 0 30px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    & > div {
+      background-color: #ddd;
+      border-radius: 50%;
+      display: inline-block;
+      height: 20px;
+      margin: 0 3px;
+      width: 20px;
+      &.active {
+        background-color: $color-orange;
+      }
+    }
+  }
+}
+
+.about-box {
+  figure {
+    margin-bottom: 5px;
+  }
+  .about-name {
+    color: #157ed2;
+    line-height: 20px;
+    &:hover {
+      color: $color-orange;
+    }
+  }
+  .about-career {
+    color: #444;
+    line-height: 20px;
+    margin: 0;
+  }
+  .about-desc {
+    margin: 13px 0 0;
+  }
+  .icon-box {
+    margin-top: 30px;
+  }
+}

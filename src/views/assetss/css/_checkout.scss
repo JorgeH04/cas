@@ -1,0 +1,110 @@
+.checkout-page {
+  background-color: #f5f5f5;
+}
+.checkout-page .main-content {
+  padding-top: 33px;
+}
+.title-left {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.color-333 {
+  color: #333;
+}
+.checkout-box {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+  .check-out-click {
+    background-color: #a3a3a3;
+    color: #fff;
+    font-size: 16px;
+    line-height: 44px;
+    padding: 0 18px;
+    cursor: pointer;
+    span {
+      margin-right: 15px;
+    }
+  }
+  .checkout-toggle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+  }
+  .method-content-left {
+    input {
+      margin: 12px 8px 12px 0;
+    }
+  }
+  p {
+    margin: 0;
+    color: #666;
+    a {
+      color: #666;
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+  .method-content-left-bottom {
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  a.button {
+    float: right;
+    margin-bottom: 30px;
+  }
+  .col-md-5 .button-check-out {
+    padding: 0 20px;
+  }
+}
+.method-content-right {
+  padding-right: 100px;
+  display: inline-block;
+  width: 100%;
+  label {
+    width: 100%;
+    margin: 10px 0 6px 12px;
+  }
+  input {
+    width: 100%;
+    @include border_radius(0);
+  }
+}
+.check-title-right {
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.check-button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
+  .button-white {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    color: #666;
+    font-size: 14px;
+    height: 36px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    text-transform: none;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

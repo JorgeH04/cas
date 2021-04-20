@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Opciones de envío</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/assets/packages/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/dist/assets/packages/animate/animate.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/o2system-venus-ui@1.1.0/dist/venus-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="/dist/assets/css/theme.css">
+
+</head>
+
+
+<body>
+    
+
+		<main class="main">
+				<div class="container-fluid">
+					<div class="breadcrumb-area">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="breadcrumb-wrap">
+										<nav aria-label="breadcrumb">
+											<ul class="breadcrumb">
+												
+												<li class="breadcrumb-item">
+													<a href="#" >
+													Proceso de compra:
+													</a>
+												</li>
+												<li class="breadcrumb-item">
+													<a href="#" style="color:red">
+														Opciones de Envío
+													</a>
+												</li>
+												<li class="breadcrumb-item">
+													<a href="#"  >
+														Precio de Envío
+													</a>
+												 </li>
+												 <li class="breadcrumb-item">
+													 <a href="#" >
+														 Completar Datos
+													</a>
+												</li>
+		
+												<li class="breadcrumb-item">
+														<a href="#" >
+															Elegir medio de pago
+													   </a>
+												</li>
+		
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+           
+
+	<div class="section choosing-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section-title text-center">
+						<p></p>
+						<h2>Elija su medio de envío</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<% prodenvio.forEach(function (prodenvi) { %>
+				<div class="col-lg-3">
+					<div class="single-choose-item text-center">
+						<a href="/addtocardprodenvio/<%= prodenvi.id %>">	
+							<img src="<%= prodenvi.image %>" alt="">
+						</a>
+						<h4><%= prodenvi.title %></h4>
+						<p><%= prodenvi.description %>.</p>
+ 					</div>
+				</div>
+				<% }) %>
+
+				<div class="col-lg-3">
+					<div class="single-choose-item text-center">
+						<a href="/enviodos">	
+							<img src="img/download.jpg" alt="">
+						</a>	
+						<h4>Remis</h4>
+						<p>Envío según la zona</p>
+
+					</div>
+				</div>	
+
+
+				<div class="col-lg-3">
+					<div class="single-choose-item text-center">
+						<a href="/enviocuatro">	
+							<img src="img/moto.jpg" alt="">
+						</a>	
+						<h4>Moto</h4>
+						<p>Inidique la zona en la que vive</p>
+
+					</div>
+				</div>	
+
+
+
+
+
+
+				<div class="col-lg-3">
+					<div class="single-choose-item text-center">
+						<a href="/prepagar">	
+							<img src="img/fd.jpg" alt="">
+						</a>	
+						<h4>Retirar en el negocio</h4>
+						<h2></h2>
+
+					</div>
+				</div>
+			  
+
+
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+
+    
+
+
+    <script type="text/javascript" src="/dist/venus-ui.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/nice-select/nice-select.js"></script>
+    <script type="text/javascript" src="/dist/assets/js/theme.js"></script>
+</body>
+
+</html>

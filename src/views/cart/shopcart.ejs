@@ -1,0 +1,140 @@
+<% include ../partials/_header %>
+
+
+<!-- Page Introduction Wrapper -->
+<div class="page-style-a">
+    <div class="container">
+        <div class="page-intro">
+            <h2>Carro</h2>
+            <ul class="bread-crumb">
+                <li class="has-separator">
+                    <i class="ion ion-md-home"></i>
+                    <a href="/">Home</a>
+                </li>
+                <li class="is-marked">
+                    <a >Carro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Introduction Wrapper /- -->
+<!-- Cart-Page -->
+<div class="page-cart u-s-p-t-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form>
+                    <!-- Products-List-Wrapper -->
+                    <div class="table-wrapper u-s-m-b-60">
+                         
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <% if(products) { %>
+                                <% for(var i = 0; i < products.length; i++) { %>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="cart-anchor-image">
+                                            <a href="single-product.html">
+                                                <img src="<%= products[i].item.image %>" alt="Product">
+                                                <h6><%= products[i].item.title %></h6>
+                                            </a>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                            <div class="cart-price">
+                                                $<%= products[i].item.price %>
+    
+                                            </div>
+                                        </td>
+                                  
+                                    <td>
+                                        <div class="cart-quantity">
+                                            <div class="quantity">
+                                                <input type="text" class="quantity-text-field" value="<%= products[i].qty %>">
+                                                <a href="/sumar/<%= products[i].item._id %>" class="plus-a" data-max="1000">&#43;</a>
+                                                <a href="/reduce/<%= products[i].item._id %>" class="minus-a" data-min="1">&#45;</a>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                            <div class="cart-price">
+                                                $<%= products[i].price %>
+    
+                                            </div>
+                                        </td>
+
+
+                                    <td>
+                                        <div class="action-wrapper">
+                                            
+                                            <a href="/remove/<%= products[i].item._id %>" class="button button-outline-secondary fas fa-trash"><img src="images/delete.png" alt=""></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                
+                           
+                            </tbody>
+                            <% } %> 
+                        </table>
+                    </div>
+  
+                    <!-- Products-List-Wrapper /- -->
+                    <!-- Coupon -->
+                    <div class="coupon-continue-checkout u-s-m-b-60">
+          
+                        <div class="button-area">
+                            <a href="/" class="continue">Seguir comprando</a>
+                            <a href="/envio" class="checkout">Iniciar la compra</a>
+                        </div>
+                    </div>
+                    <!-- Coupon /- -->
+                </form>
+                <!-- Billing -->
+                <div class="calculation u-s-m-b-60">
+                    <div class="table-wrapper-2">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                 
+                                
+                                <tr>
+                                    <td>
+                                        <h3 class="calc-h3 u-s-m-b-0">Total</h3>
+                                    </td>
+                                    <td>
+                                        <span class="calc-text">$<%= totalPrice %> </span>
+                                    </td>
+                                </tr>
+                                <% } else { %>   
+                                <% } %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Billing /- -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cart-Page /-                                 
+-->
+
+<% include ../partials/_footer %>

@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Visitas || Arte stelen</title>
+    <link rel='stylesheet' href='/assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/assets/css/owl.carousel.min.css'>
+    <link rel='stylesheet' href='/assets/css/animated.css'>
+    <link rel='stylesheet' href='/assets/css/font-awesome.css'>
+    <link rel='stylesheet' href='/assets/css/ui.css'>
+    <link rel='stylesheet' href='/assets/css/jquery.mmenu.all.css'>
+    <link rel='stylesheet' href='/assets/css/flaticon.css'>
+    <link rel='stylesheet' href='/assets/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i;Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+<body class="body-color-blue" data-main-color="#0b2076">
+    <header class="header header-style5">
+        <div class="header-mid">
+            <div class="container">
+                <div class="header-mid-left">
+                    <span class="register-or-login">    <a href="#"> </a></span>
+                </div>
+                <div class="header-mid-right">
+                    <div class="header-mid-right-content">
+                        <a href="#">
+                        </a>
+                    </div>
+                    <div class="header-mid-right-content">
+                        <a href="#">
+                        </a>
+                    </div>
+                    <div class="header-mid-right-content money-select-menu">
+                        <div class="money-select">
+                            
+                        </div>
+                    </div>
+                    <div class="header-mid-right-content country-select-menu">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="/" class="btn btn-primary " >
+          volver a inicio
+        </a>
+        
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                  
+        
+
+                    <div class="header-bottom-left col-sm-3">
+                        <h1 class="logo"> 
+                            Visitas
+                        </h1>
+                    </div>
+                    <div class="header-bottom-center col-sm-6">
+                        <div class="header-search">
+                                
+                        </div>
+                    </div>
+                    <div class="header-bottom-right col-sm-3">
+                        <div class="header-bottom-right-content cart-menu-relative">
+
+                                <div class="cart-menu">
+                                    </div>
+                                    <div class="cart-hover">
+                                        
+                            </div>
+                                
+
+
+                        </div>
+                        <div class="header-bottom-right-content my-supermarket">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-primary">
+            <div class="container">
+           <h3>Total de visitas: <%= totalvisitas %></h3>  
+
+             </div>
+        </div>
+    </header>
+
+
+
+      
+<div class="col-md-12 mt-5">
+ 
+    <% ahome.forEach(function (ahom ) { %>
+
+<table class="table table-bordered table-hover mt-5">
+<thead>
+ <tr>
+ 
+    <th>Visitas</th>
+    <th>Ip</th>
+    <th>Fecha</th>
+
+    
+ </tr>
+</thead>
+<tbody>
+          
+                    <td> <%= ahom.views %></td>
+                    <td> <%= ahom.ip  %></td>
+                    <td> <%= ahom.createdAt.toLocaleDateString() %> </td>
+                    
+            
+                    </tr>
+            
+                    <% }) %>    
+            
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+  
+
+
+<div class="col-12">
+    <div class="row">
+
+          <!-- pagination -->
+          <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+            <nav  class="mx-auto" style="margin-bottom: 50px">
+              <ul class="pagination">
+                <!-- FIRST ITEM -->
+                <% if(current == 1) { %>
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">First</a>
+                  </li>
+                <% } else { %>
+                  <li class="page-item">
+                    <a class="page-link" href="/visitas/1">First</a>
+                  </li>
+                <% } %>
+                <!-- ITEMS  -->
+                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                <% if(i !== 1) { %>
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">...</a>
+                  </li>
+                <% } %>
+                <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                  <% if(i == current) { %>
+                    <li class="page-item active">
+                      <a class="page-link" href="<%= i %>">
+                        <%= i %>
+                      </a>
+                    </li>
+                  <% } else { %>
+                    <li class="page-item">
+                      <a class="page-link" href="/visitas/<%= i %>">
+                        <%= i %>
+                      </a>
+                    </li>
+                  <% } %>
+                  <% if (i == Number(current) + 4 && i < pages) { %>
+                     <li class="page-item disabled">
+                       <a class="page-link" href="#">...</a>
+                     </li>
+                  <% } %>
+                <% } %>
+                <!-- LAST ITEM -->
+                <% if(current == pages) { %>
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">
+                      Last
+                    </a>
+                  </li>
+                <% } else { %>
+                  <li class="page-item">
+                    <a class="page-link" href="/vistas/<%= pages %>">
+                      Last
+                    </a>
+                  </li>
+                <% } %>
+              </ul>
+            </nav>
+          <% } %>
+
+
+        </div>
+      </div>
+
+          
+
+    
+        <!--end footer-->
+        <script type='text/javascript' src='/assex/js/jquery.min.js'></script>
+        <script type='text/javascript' src='/assex/js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='/assex/js/wow.min.js'></script>
+        <script type='text/javascript' src='/assex/js/owl.carousel.min.js'></script>
+        <script type='text/javascript' src='/assex/js/jquery.appear.min.js'></script>
+        <script type='text/javascript' src='/assex/js/jquery.countTo.js'></script>
+        <script type='text/javascript' src='/assex/js/ui.js'></script>
+        <script type='text/javascript' src='/assex/js/jquery.bxslider.min.js'></script>
+        <script type='text/javascript' src='/assex/js/jquery.mmenu.all.min.js'></script>
+        <script type='text/javascript' src='/assex/js/chosen.jquery.min.js'></script>
+        <script type='text/javascript' src='/assex/js/jquery.countdown.js'></script>
+        <script type='text/javascript' src='/assex/js/frontend.js'></script>
+        </body>
+        </html>

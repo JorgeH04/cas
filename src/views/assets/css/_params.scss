@@ -1,0 +1,130 @@
+$color-orange: #ff8400;
+$color-yellow: #f8b91d;
+$color-violet: #443266;
+$color-blue-main: #0b2076;
+$color-orange_lighter: rgba($color-orange, .1);
+$color-red: #da3838;
+$color-red-h3: #c3023b;
+$color-blue: #3366cc;
+$color-blue-h3: #3374a6;
+$font-body-size: 14px;
+$color-body: #666666;
+$color-duck:#333333;
+$background-duck: #3e3e3e;
+$font-body: 'Lato', sans-serif;
+$font-body-san: 'Open Sans', sans-serif;
+
+@mixin animate($time, $animation){
+  animation-duration: $time;
+  -webkit-animation-duration: $time;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-name: $animation;
+  -webkit-animation-name: $animation;
+}
+@mixin transition_ease($time) {
+  -webkit-transition: all $time ease-in-out 0s;
+  -moz-transition: all $time ease-in-out 0s;
+  -ms-transition: all $time ease-in-out 0s;
+  -o-transition: all $time ease-in-out 0s;
+  transition: all $time ease-in-out 0s;
+}
+
+
+@mixin transition_padding($time) {
+  -webkit-transition: padding $time ease 0s;
+  -moz-transition: padding $time ease 0s;
+  -ms-transition: padding $time ease 0s;
+  -o-transition: padding $time ease 0s;
+  transition: padding $time ease 0s;
+}
+
+@mixin transform_translateY($posY) {
+  -webkit-transform: translateY($posY);
+  -ms-transform: translateY($posY);
+  -o-transform: translateY($posY);
+  transform: translateY($posY);
+}
+
+@mixin transform_translateX($posX) {
+  -webkit-transform: translateX($posX);
+  -ms-transform: translateX($posX);
+  -o-transform: translateX($posX);
+  transform: translateX($posX);
+}
+
+@mixin transform_translate($posX, $posY) {
+  -webkit-transform: translateX($posX) translateY($posY);
+  -ms-transform: translateX($posX) translateY($posY);
+  -o-transform: translateX($posX) translateY($posY);
+  transform: translateX($posX) translateY($posY);
+}
+@mixin transform_translatez($posX, $posY,$scale) {
+  -webkit-transform: translateX($posX) translateY($posY) scale($scale);
+  -ms-transform: translateX($posX) translateY($posY) scale($scale);
+  -o-transform: translateX($posX) translateY($posY) scale($scale);
+  transform: translateX($posX) translateY($posY) scale($scale);
+}
+
+@mixin transform_scale($scale) {
+  -webkit-transform: scale($scale);
+  -ms-transform:  scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+
+@mixin transform_rotate($rotate) {
+  -webkit-transform: rotate($rotate);
+  -ms-transform:  rotate($rotate);
+  -o-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+@mixin border_circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin width_radius ($width_radius) {
+  width: $width_radius;
+  height: $width_radius;
+  line-height: $width_radius;
+  text-align: center;
+}
+
+@mixin asblute {
+  opacity: 0;
+  visibility: hidden;
+  @include transform_translateY(50px);
+  @include transition_ease(0.3s);
+  position: absolute;
+}
+
+@mixin tag_hover {
+  opacity: 1;
+  visibility: visible;
+  @include transform_translateY(0);
+  @include transition_ease(0.6s);
+  z-index:5;
+}
+
+@mixin tranform_transis($x, $y, $s) {
+  -webkit-transform: translateX($x) translateY($y) scale($s);
+  -moz-transform: translateX($x) translateY($y) scale($s);
+  -ms-transform: translateX($x) translateY($y) scale($s);
+  -o-transform: translateX($x) translateY($y) scale($s);
+  transform: translateX($x) translateY($y) scale($s);
+  @include transition_ease(0.4s);
+}

@@ -1,0 +1,81 @@
+
+<% include ../partials/_header %>
+
+<!-- Page Introduction Wrapper -->
+<div class="page-style-a">
+    <div class="container">
+        <div class="page-intro">
+            <h2>Nueva contraseña</h2>
+            <ul class="bread-crumb">
+                <li class="has-separator">
+                    <i class="ion ion-md-home"></i>
+                    <a href="/">Home</a>
+                </li>
+                <li class="is-marked">
+                    <a href="#">Cuenta</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Introduction Wrapper /- -->
+
+
+
+<!-- Account-Page -->
+<div class="page-account u-s-p-t-80">
+    <div class="container">
+        <div class="row">
+            <!-- Login -->
+            <div class="col-lg-12">
+                <div class="login-wrapper">
+                    <h2 class="account-h2 u-s-m-b-20">Cambiar contraseña</h2>
+                    <h6 class="account-h6 u-s-m-b-30">Inicie sesión para poder comprar nuestros productos.</h6>
+                    <form action="/passwordForgot/<%= User.resetPasswordToken %>" method="POST">
+                        <div class="u-s-m-b-30">
+                            <label for="user-name-email">Nueva contraseña
+                                <span class="astk">*</span>
+                            </label>
+                            <input type="password" name="resetPassword" id="user-name-email" class="text-field" placeholder="Ej: Carlos Gomez">
+                        </div>
+                        <div class="u-s-m-b-30">
+                            <label for="login-password">Repetir contraseña
+                                <span class="astk">*</span>
+                            </label>
+                            <input type="password" name="repeatresetPassword" id="login-password" class="text-field" placeholder="Contraseña">
+                        </div>
+                        <div class="group-inline u-s-m-b-30">
+                            <div class="group-1">
+                             </div>
+                            <div class="group-2 text-right">
+                                <div class="page-anchor">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-b-45">
+                            <button class="button button-outline-secondary w-100">Enviar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <!-- Login /- -->
+
+
+
+         
+        </div>
+    </div>
+</div>
+<!-- Account-Page /- -->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <% include ../partials/_footer %>

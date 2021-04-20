@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Precio de envío</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/assets/packages/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/dist/assets/packages/animate/animate.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/o2system-venus-ui@1.1.0/dist/venus-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dist/assets/css/theme.css">
+    <link rel="canonical" href="http://localhost:4000/index.html">
+</head>
+
+
+<body>
+
+        <main class="main">
+				<div class="container-fluid">
+					<div class="breadcrumb-area">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="breadcrumb-wrap">
+										<nav aria-label="breadcrumb">
+											<ul class="breadcrumb">
+                                                <li class="breadcrumb-item">
+                                                     <a href="#" >
+                                                          Proceso de compra:
+                                                      </a>
+                                                 </li>
+												<li class="breadcrumb-item">
+													<a href="#" >
+														Opciones de Envío
+													</a>
+												</li>
+												<li class="breadcrumb-item">
+													<a href="#" style="color:red" >
+														Precio de Envío
+													</a>
+												 </li>
+												 <li class="breadcrumb-item">
+													 <a href="#" >
+														 Completar Datos
+													</a>
+												</li>
+		
+												<li class="breadcrumb-item">
+														<a href="#" >
+															Elegir medio de pago
+													   </a>
+												</li>
+		
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+ 
+            
+            <div class="section choosing-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title text-center">
+                                <p></p>
+                                <h2>Precio del envío</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single-choose-item text-center">
+                                    <img src="<%= prodenviodos.image %>" alt="">
+                                <h4> <%= prodenviodos.title %>  </h4>
+                                <p><%= prodenviodos.description %>.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single-choose-item text-center">
+                                    <i class="fa fa-id-card" aria-hidden="true"></i>
+                                <h4>Precio del envío</h4>
+                                <h2>$<%= prodenviodos.price %></h2>
+                                <a href="/addtocardprodenviodos/<%= prodenviodos.id %>" class="btn btn-success pull-right" role="button">Continuar</a>
+
+                            </div>
+                        </div>
+                      
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <main class="main">
+        <div class="container-fluid">
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-wrap">
+                                <nav aria-label="breadcrumb">
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="#">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">
+                                                Shop
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            <a href="#">
+                                                Wishlist
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section list-products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="cart-table table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="pro-thumbnail">Thumbnail</th>
+                                            <th class="pro-title">Product</th>
+                                            <th class="pro-price">Price</th>
+                                            <th class="pro-quantity">Stock Status</th>
+                                            <th class="pro-subtotal">Add to Cart</th>
+                                            <th class="pro-remove">Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pro-thumbnail">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="dist/assets/img/product-1.jpg" alt="Product" />
+                                                </a>
+                                            </td>
+                                            <td class="pro-title">
+                                                <a href="#">
+                                                    element snowboard
+                                                </a>
+                                            </td>
+                                            <td class="pro-price">
+                                                <span>$295.00</span>
+                                            </td>
+                                            <td class="pro-quantity">
+                                                <span class="text-success">In Stock</span>
+                                            </td>
+                                            <td class="pro-subtotal">
+                                                <a href="cart.html" class="square-btn text-white">
+                                                    Add to Cart
+                                                </a>
+                                            </td>
+                                            <td class="pro-remove">
+                                                <a href="#">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script type="text/javascript" src="dist/venus-ui.js"></script>
+    <script type="text/javascript" src="dist/assets/packages/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="dist/assets/packages/nice-select/nice-select.js"></script>
+    <script type="text/javascript" src="dist/assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+/*    [Table of contents]   */
+/*--------------------------/*
+Tempale name : Supermarket
+Version    : 1.0.0
+Author     : kutethemes
+Last change: 10/10/2016    */
+/*-------------------------/*
+[Table of contents]
+[Color codes]
+    Background: #ffffff
+    Body Color : #666666
+    Accent color: #df5c53
+[Typography]
+    Body:       14px/25px "Lato",sans-serif;
+    Heading:    "Lato",sans-serif
+    Input, textarea: 16px/30px "Lato",sans-serif
+
+[Component module]
+
+    COMMON STYLES
+    HEADER
+    MAIN
+    BLOGS
+    PRODUCT STYLE
+    FOOTER
+    REPONSIVE
+/*------------------------/**/
+
+
+/*-------------------------*/
+/*      COMMON STYLES     */
+/*------------------------*/
+
+/* -------------------- */
+/*      params       */
+/* -------------------- */
+@import "params";
+/* -------------------- */
+/*      end params       */
+/* -------------------- */
+
+body {
+  font-family: $font-body;
+  font-size: $font-body-size;
+  line-height: 25px;
+  color: $color-body;
+  width: 100%;
+  overflow-x: hidden; }
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+img {
+  max-width: 100%; }
+
+a {
+  color: #333;
+  @include transition_ease(0.3s);
+  text-decoration: none; }
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none; }
+
+p {
+  margin-bottom: 20px; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+ul ul, ol ol, ul ol, ol ul {
+  padding-left: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  line-height: 38px;
+  height: 38px;
+  border-radius: 3px;
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+
+}
+textarea{
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  border-radius: 3px;
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+a:focus,
+button:focus,
+select:focus {
+  outline: none; }
+
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: inherit;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: inherit;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+[class^="flaticon-"]::before, [class*=" flaticon-"]::before, [class^="flaticon-"]::after, [class*=" flaticon-"]::after {
+  font-size: inherit;
+  margin-left: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+table, th, td {
+  border: 1px solid #ececec; }
+
+th, td {
+  padding: 10px; }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: $font-body;
+  font-weight: 600;
+}
+ul, li {
+  list-style: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+option {
+  height: 30px;
+  line-height: 30px;
+  padding: 5px 0 5px 20px;
+}
+a {
+  &:hover{
+    text-decoration: none;
+    color: $color-orange;
+  }
+}
+.home3 a.button {
+  &:hover {
+    background-color: $color-blue-h3;
+    color: #fff;
+  }
+}
+a.button {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 33px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $color-orange;
+    color: #fff;
+  }
+}
+a.orange {
+  background-color: $color-orange;
+  color: #fff;
+}
+a.dark {
+  background-color: #3e3e3e;
+  color: #fff;
+}
+a.blue {
+  background-color: $color-blue;
+  color: #fff;
+}
+a.bg-666 {
+  background-color: #666;
+  color: #fff;
+}
+a.button-check-out {
+  color: #333;
+  background-color: #dbdbdb;
+  height: 34px;
+  line-height: 33px;
+}
+a.red {
+  background-color: $color-red-h3;
+  color: #fff;
+}
+.sidebar-left {
+  .content {
+    float: right;
+  }
+}
+.sidebar-right {
+  .sidebar {
+    float: right;
+  }
+}
+.container{
+  padding: 0;
+}
+/* -------------------- */
+/*  Padding Section     */
+/* -------------------- */
+@import "padding-section";
+/* -------------------- */
+
+/* -------------------- */
+/*      Header          */
+/* -------------------- */
+@import "header";
+/* -------------------- */
+/*      end Header      */
+/* -------------------- */
+
+/* -------------------- */
+/*     banner-slide     */
+/* -------------------- */
+@import "banner-slide";
+/* -------------------- */
+/*   end banner-slide   */
+/* -------------------- */
+
+/* -------------------- */
+/*      main            */
+/* -------------------- */
+@import "main";
+/* -------------------- */
+/*      end main        */
+/* -------------------- */
+
+
+/* -------------------- */
+/*   PRODUCT STYLE      */
+/* -------------------- */
+
+
+/* -------------------- */
+/*      categories      */
+/* -------------------- */
+@import "categories";
+/* -------------------- */
+/*      end categories  */
+/* -------------------- */
+
+/* -------------------- */
+/*      detail          */
+/* -------------------- */
+@import "detail";
+/* -------------------- */
+/*      end detail      */
+/* -------------------- */
+
+/* -------------------- */
+/*      shopingcart     */
+/* -------------------- */
+@import "shopingcart";
+/* -------------------- */
+/*    end shopingcart   */
+/* -------------------- */
+
+/* -------------------- */
+/*      checkout       */
+/* -------------------- */
+@import "checkout";
+/* -------------------- */
+/*      end checkout    */
+/* -------------------- */
+
+/* -------------------- */
+/*      about           */
+/* -------------------- */
+@import "about";
+/* -------------------- */
+/*      end about       */
+/* -------------------- */
+
+/* -------------------- */
+/*      contact         */
+/* -------------------- */
+@import "contact";
+/* -------------------- */
+/*     end contact      */
+/* -------------------- */
+
+
+
+/* -------------------- */
+/*      BLOG            */
+/* -------------------- */
+@import "blog";
+/* -------------------- */
+/*      end blog        */
+/* -------------------- */
+
+/* -------------------- */
+/*      blogpost        */
+/* -------------------- */
+@import "blogpost";
+/* -------------------- */
+/*    end blogpost      */
+/* -------------------- */
+
+/* -------------------- */
+/*       Footer         */
+/* -------------------- */
+@import "footer";
+/* -------------------- */
+/*     end Footer       */
+/* -------------------- */
+
+/* -------------------- */
+/*      responsive      */
+/* -------------------- */
+@import "responsive";
+/* -------------------- */
+/*     end responsive   */
+/* -------------------- */

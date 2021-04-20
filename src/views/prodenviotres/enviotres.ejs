@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Opciones de envío</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/assets/packages/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/dist/assets/packages/animate/animate.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/o2system-venus-ui@1.1.0/dist/venus-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="/dist/assets/css/theme.css">
+
+</head>
+
+
+<body>
+    
+
+
+
+
+
+<main class="main">
+	<div class="container-fluid">
+		<div class="breadcrumb-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="breadcrumb-wrap">
+							<nav aria-label="breadcrumb">
+								<ul class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                                <a >
+                                                    Proceso de compra:
+                                                </a>
+                                    </li>
+                                    
+                                    <li class="breadcrumb-item">
+                                        <a href="/shopcart" >
+                                        Carro de compra
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="/envio" style="color:red">
+                                            Opciones de Envío
+                                        </a>
+                                    </li>
+                                    
+                                     <li class="breadcrumb-item">
+                                         <a href="#" >
+                                             Completar Datos
+                                        </a>
+                                    </li>
+
+                                    <li class="breadcrumb-item">
+                                            <a href="#" >
+                                                Elegir medio de pago
+                                           </a>
+                                    </li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section list-products">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="cart-table table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="pro-thumbnail">Thumbnail</th>
+										<th class="pro-title">Product</th>
+										<th class="pro-quantity">Stock Status</th>
+									</tr>
+								</thead>
+								<tbody>
+                                        <% prodenviotres.forEach(function (prodenviodo) { %>
+
+                                            
+									<tr>
+										
+										<td class="pro-title">
+											<a href="#">
+                                                    <%= prodenviodo.title %>
+											</a>
+										</td>
+										<td class="pro-price">
+											<span>$<%= prodenviodo.price %></span>
+										</td>
+									
+										<td class="pro-subtotal">
+											<a href="/addtocardprodenviotres/<%= prodenviodo.id %>"
+												 class="square-btn text-white">
+												Add to Cart
+											</a>
+										</td>
+									
+									</tr>
+									<% }) %>
+									
+									
+								</tbody>
+							</table>
+
+
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+    
+
+
+    <script type="text/javascript" src="/dist/venus-ui.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/dist/assets/packages/nice-select/nice-select.js"></script>
+    <script type="text/javascript" src="/dist/assets/js/theme.js"></script>
+</body>
+
+</html>

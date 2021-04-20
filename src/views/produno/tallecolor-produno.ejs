@@ -1,0 +1,43 @@
+<% include ../partials/_header %>
+
+
+
+<div id="content ">
+  <div class="product-page container mt-5">
+      
+            <div class="single-inputs row">
+              <div class="col-md-6">
+                <form action="/produno/tallecolor/<%= produno._id %>" method="POST">
+                   <select class="select" name="talle">
+                    <option value="Select Size">Elegir talle</option>
+                    <option value="<%= produno.talleuno %>"><%= produno.talleuno %></option>
+                    <option value="<%= produno.talledos %>"><%= produno.talledos %></option>
+                    <option value="<%= produno.talletres %>"><%= produno.talletres %></option>
+                    <option value="<%= produno.tallecuatro %>"><%= produno.tallecuatro %></option>
+                    <option value="XXL">XXL</option>
+                  </select>
+              </div>
+              <div class="col-md-6">
+                   <select class="select" name="color">
+                   <option value="Select Color">Elegir Color</option>
+                    <option value="<%= produno.coloruno %>"><%= produno.coloruno %></option>
+                    <option value="<%= produno.colordos %>"><%= produno.colordos %></option>
+                    <option value="<%= produno.colortres %>"><%= produno.colortres %></option>
+                    <option value="<%= produno.colorcuatro %>"><%= produno.colorcuatro %></option>
+                </select>
+                              </div>
+                              <button class="btn btn-success">Enviar</button>
+                              </form>
+                          </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+  </div>
+</div>
+            
+
+      <% include ../partials/_footer %>
+      

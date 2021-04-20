@@ -1,0 +1,38 @@
+<% include ../partials/_header %>
+
+
+
+<div id="content">
+    <div class="product-page container">
+        
+							<div class="single-inputs row">
+								<div class="col-md-6">
+                                    <form action="/ofertatres/tallecolor/<%= ofertatres._id %>" method="POST">
+									   <select class="select" name="talle">
+										  <option value="Select Size">Elegir talle</option>
+										  <option value="<%= ofertatres.talleuno %>"><%= ofertatres.talleuno %></option>
+										  <option value="<%= ofertatres.talledos %>"><%= ofertatres.talledos %></option>
+										  <option value="<%= ofertatres.talletres %>"><%= ofertatres.talletres %></option>
+										  <option value="<%= ofertatres.tallecuatro %>"><%= ofertatres.tallecuatro %></option>
+										  <option value="XXL">XXL</option>
+									  </select>
+								</div>
+								<div class="col-md-6">
+									   <select class="select" name="color">
+										 <option value="Select Color">Elegir Color</option>
+										  <option value="<%= ofertatres.coloruno %>"><%= ofertatres.coloruno %></option>
+										  <option value="<%= ofertatres.colordos %>"><%= ofertatres.colordos %></option>
+										  <option value="<%= ofertatres.colortres %>"><%= ofertatres.colortres %></option>
+										  <option value="<%= ofertatres.colorcuatro %>"><%= ofertatres.colorcuatro %></option>
+									</select>
+                                </div>
+                                <button >Enviar</button>
+                                </form>
+                            </div>
+
+    </div>
+</div>
+                    
+
+ <% include ../partials/_footer %>
+                            
